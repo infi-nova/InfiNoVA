@@ -1,6 +1,7 @@
 # InfiNoVA
 
 [![arXiv](https://img.shields.io/badge/arXiv-2609.27734-b31b1b.svg)](https://arxiv.org/abs/2609.27734)
+[![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://infi-nova.github.io/)
 
 InfiNoVA augments robot demonstration data with novel-view renders synthesized
 from sparse-view Gaussian Splatting, then packages the result into a
@@ -279,7 +280,7 @@ python train_smolvla_folder_views.py \
 ## Paper
 
 **InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies**
-Sai Puneeth Reddy Gottam, Elmar Rueckert, Vedant Dave — [arXiv:2609.27734](https://arxiv.org/abs/2609.27734)
+Sai Puneeth Reddy Gottam, Elmar Rueckert, Vedant Dave — [arXiv:2609.27734](https://arxiv.org/abs/2609.27734) · [Project Page](https://infi-nova.github.io/)
 
 If you use this code in your research, please cite:
 
