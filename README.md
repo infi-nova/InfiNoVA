@@ -73,6 +73,39 @@ pip install -e './lerobot[smolvla]'
 See [`lerobot/README.md`](lerobot/README.md) for hardware-specific extras and
 the full installation documentation.
 
+### Docker (alternative to steps 2-3)
+
+Instead of setting up both conda environments by hand, build the provided
+`Dockerfile`, which creates both the `instantsplatPP` and `infinova-lerobot`
+conda environments inside a single CUDA-enabled image:
+
+```bash
+docker build -t infinova .
+docker run --gpus all -it -v $(pwd):/workspace/infinova infinova
+```
+
+Requires the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+on the host for `--gpus all` to work. Inside the container, activate whichever
+environment the step you're running needs:
+
+```bash
+conda activate instantsplatPP
+./run_instantsplat_episode.sh INPUT_FOLDER OUTPUT_FOLDER "$(which python)" \
+    START_FRAME END_FRAME --cameras cam0 cam1 cam2 cam3 cam4
+
+conda activate infinova-lerobot
+python publish_folder_view_dataset.py \
+    --repo-id your-username/base_dataset \
+    --image-root /path/to/episode_folders \
+    --output-repo-id your-username/folder_view_dataset
+```
+
+The MASt3R checkpoint is downloaded at build time, so the image is ready to
+run immediately. Building compiles CUDA extensions for `TORCH_CUDA_ARCH_LIST`
+`"7.0;7.5;8.0;8.6;8.9;9.0+PTX"` by default (covers V100 through H100/RTX 40xx);
+override with `--build-arg TORCH_CUDA_ARCH_LIST=...` if you need a different
+architecture.
+
 ## Usage
 
 Each script is self-contained and documented with `--help`. All of them accept

@@ -1,0 +1,9 @@
+.git
+**/.git
+**/__pycache__/
+**/*.pyc
+**/*.egg-info/
+instantsplat_reusable/
+*_novel_views/
+outputs/
+exported_frames/
