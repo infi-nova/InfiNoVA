@@ -42,8 +42,8 @@ requires Python >= 3.12), so set up **two separate environments**.
 ### 1) Clone with both submodules
 
 ```bash
-git clone --recursive https://github.com/puneethgottam/infinova.git
-cd infinova
+git clone --recursive https://github.com/infi-nova/InfiNoVA.git
+cd InfiNoVA
 ```
 
 If you already cloned without `--recursive`:
@@ -313,19 +313,15 @@ python train_smolvla_folder_views.py \
 ## Paper
 
 **InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies**
-Sai Puneeth Reddy Gottam, Elmar Rueckert, Vedant Dave — [arXiv:2609.27734](https://arxiv.org/abs/2609.27734) · [Project Page](https://infi-nova.github.io/)
+[arXiv:2609.27734](https://arxiv.org/abs/2609.27734) · [Project Page](https://infi-nova.github.io/)
 
 If you use this code in your research, please cite:
 
 ```bibtex
-@misc{gottam2026infinovainfinitenovelview,
-      title={InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies},
-      author={Sai Puneeth Reddy Gottam and Elmar Rueckert and Vedant Dave},
-      year={2026},
-      eprint={2609.27734},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2609.27734},
+@article{infinoVA2026,
+  title={InfiNoVA},
+  author={Anonymous Authors},
+  year={2026}
 }
 ```
 
