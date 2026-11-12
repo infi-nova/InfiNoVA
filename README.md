@@ -1,6 +1,5 @@
 # InfiNoVA
 
-[![arXiv](https://img.shields.io/badge/arXiv-2609.27734-b31b1b.svg)](https://arxiv.org/abs/2609.27734)
 [![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://infi-nova.github.io/)
 
 InfiNoVA augments robot demonstration data with novel-view renders synthesized
@@ -313,7 +312,7 @@ python train_smolvla_folder_views.py \
 ## Paper
 
 **InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies**
-[arXiv:2609.27734](https://arxiv.org/abs/2609.27734) · [Project Page](https://infi-nova.github.io/)
+[Project Page](https://infi-nova.github.io/)
 
 If you use this code in your research, please cite:
 
